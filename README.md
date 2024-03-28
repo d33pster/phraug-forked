@@ -9,14 +9,43 @@ There's always at least one input file and usually one or more output files. An 
 
 __[phraug2](https://github.com/zygmuntz/phraug2) is available. It offers improved handling of command line arguments.__ Check it out.
 
+Pre-requisites
+--------------
+install the requirements
+```bash
+# run this in terminal
+pip install -r requirements.txt
+```
+
 Format conversion
 -----------------
 
+`csv2libsvm` - updated arguments and quality of use.
+```bash
+# in terminal run:
+csv2libsvm.py -h # or csv2libsvm.py --help
+```
+
+```console
+# output:
+
+csv2libsvm. by zygmuntz. edited by d33pster
+
+HELP TEXT
+
+  |     -h or --help          : show this help text and exit.
+     COMPULSORY ARGUMENTS:
+  |     -i or --infile        : specify input file.
+  |     -o or --outfile       : specify output file.
+     OPTIONAL ARGUMENTS:
+  |     -li or --label-index  : specify label index. if no labels in input file, set to -1.
+  |     -sh or --skip-headers : takes 0 or 1. if there are headers in input file, set to 1.
+END
+```
+NOTE: Convert CSV to the LIBSVM format. If there are no labels in the input file, specify _label index_ = -1. If there are headers in the input file, specify _skip headers_ = 1.
+
+
 `[...]` means that the parameter is optional.
-
-`csv2libsvm.py <input file> <output file> [<label index = 0>] [<skip headers = 0>]`
-
-Convert CSV to the LIBSVM format. If there are no labels in the input file, specify _label index_ = -1. If there are headers in the input file, specify _skip headers_ = 1.
 
 `pivotedcsv2libsvm.py <input file> <output file> [<skip headers = 0>]`
 
